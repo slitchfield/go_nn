@@ -15,6 +15,10 @@ type Sample struct {
   outputs []float32
 }
 
+func (s *Sample) GetInputs() []float32 {
+  return s.inputs
+}
+
 func (s *Sample) Print () string {
   return fmt.Sprintf("%d Inputs: %f|%d Outputs: %f", s.input_len, s.inputs, s.output_len, s.outputs)
 }
